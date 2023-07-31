@@ -16,8 +16,8 @@ salloc --account=soc-gpu-np --partition=soc-gpu-np --nodes=1 --ntasks=16 --gres=
 2. Run the `collect_metric_extended_4bit.sh` and `collect_metric_extended_8bit.sh` script as:     
 
 ```bash
-srun ./collect_metric_extended_4bit.sh <path to 4_bit output dir> <input file ref> <input file query> <result file>
-srun ./collect_metric_extended_8bit.sh <path to 8_bit output dir> <input file ref> <input file query> <result file>
+srun ./collect_metric_extended_4bit.sh <path to TANGO build dir> <path to 4_bit output dir> <input file ref> <input file query> <result file>
+srun ./collect_metric_extended_8bit.sh <path to TANGO build dir> <path to 8_bit output dir> <input file ref> <input file query> <result file>
 ```
 
 3. After profiler completion, run the `merge.sh` to obtain the `sequence_dna_kernel_traceback.csv` files using:     
