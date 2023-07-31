@@ -11,19 +11,20 @@ This repository contains the essential scripts of profiling, building, and visua
 salloc --account=soc-gpu-np --partition=soc-gpu-np --nodes=1 --ntasks=16 --gres=gpu:a100:1 --mem=0
 ```
 
-3. Run the `collect_metric_extended.sh` script as:     
+2. Run the `collect_metric_extended_4bit.sh` and `collect_metric_extended_8bit.sh` script as:     
 
 ```bash
-srun ./collect_metric_extended.sh
+srun ./collect_metric_extended_4bit.sh <path to output dir>
+srun ./collect_metric_extended_8bit.sh <path to output dir>
 ```
 
-4. After profiler completion, run the `merge.sh` to obtain the `Adept_F.csv` and `Adept_R.csv` files using:     
+3. After profiler completion, run the `merge.sh` to obtain the `Adept_F.csv` and `Adept_R.csv` files using:     
 
 ```bash
-srun ./merge.sh ./output_extended
+srun ./merge.sh <path to output dir>
 ```
 
-5. Finally, run the `adept_roofline.py` script with proper parameters to build and visualize the roofline for both Adept kernels as:     
+4. Finally, run the `adept_roofline.py` script with proper parameters to build and visualize the roofline for both Adept kernels as:     
 
 ```bash
 # get help on input parameters
