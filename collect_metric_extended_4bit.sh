@@ -36,7 +36,8 @@ kernel=(sequence_dna_kernel_traceback)
 #apphome=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/LEANN_TEST/ADEPT_DEVELOPMENT/DEVELOPMENT/GPU-BSW
 
 # ADEPT 4 bit
-apphome=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/LEANN_TEST/ADEPT_CURRENT/CLEAN/ADEPT-T
+#apphome=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/LEANN_TEST/ADEPT_CURRENT/CLEAN/ADEPT-T
+apphome=$1
 
 # ADEPT 8 bit vertical 
 #apphome=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/LEANN_TEST/ADEPT_CURRENT/8BIT_VERTICAL/ADEPT-T
@@ -49,9 +50,12 @@ app=${apphome}/build/program_gpu
 
 # arguments
 arg1=dna
-arg2=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/DATA/large_datasets/DNA/MILLION/dna_ref_1M.fasta
-arg3=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/DATA/large_datasets/DNA/MILLION/dna_read_1M.fasta
-arg4=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/BENCHMARKING_RESULTS/ROOFLINE/out
+#arg2=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/DATA/large_datasets/DNA/MILLION/dna_ref_1M.fasta
+#arg3=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/DATA/large_datasets/DNA/MILLION/dna_read_1M.fasta
+#arg4=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/BENCHMARKING_RESULTS/ROOFLINE/out
+arg2=$2
+arg3=$3
+arg4=$4
 
 #outputfolder=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/BENCHMARKING_RESULTS/ROOFLINE/ADEPT
 outputfolder=/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/ADEPT/BENCHMARKING_RESULTS/ROOFLINE/ADEPT_4bit
