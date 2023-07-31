@@ -3,20 +3,9 @@
 This repository contains the essential scripts of profiling, building, and visualizing the Instruction Roofline Model for the Adept kernels on NVIDIA GPUs.
 
 ## Usage Instructions
-1. Open the file `collect_metric_extended.sh` and edit the lines 7 to 14 to reflect Adept application paths.     
 
-```bash
-7 # path to adept's repo home
-8 apphome=$HOME/repos/mhaseeb/adept_revamp
-9
-10 # path to adept_test app and three arguments to it
-11 app=${apphome}/build/adept_test
-12 arg1=/global/cscratch1/sd/mhaseeb/sw-benchmarks/ref_set_1.fasta
-13 arg2=/global/cscratch1/sd/mhaseeb/sw-benchmarks/read_set_1.fasta
-14 arg3=${apphome}/build/aligned.out
-```
 
-2. Allocate a GPU node (preferably with `--exclusive`) using the following command:     
+1. Allocate a GPU node (preferably with `--exclusive`) using the following command:     
 
 ```bash
 salloc -G 1 -C gpu -t 00:30:00 --exclusive
