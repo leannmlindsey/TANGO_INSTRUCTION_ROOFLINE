@@ -38,11 +38,11 @@ srun ./merge.sh <path to 8_bit output dir>
 srun python ./two_kernel_rooflines.py -a <path to output dir>/sequence_dna_kernel_traceback.csv --at 5.35 -b <path to output dir>/sequence_dna_kernel_traceback.csv --bt 4.63
 
 # The values for -at and -bt were obtained from running Nvidia Nsight Compute with the following command:
-```
+
 cd <path to TANGO build dir>
 srun -N 1 --gpus-per-node=1 --ntasks=1 ncu -o ncu-metrics.txt -k sequence_dna_kernel_traceback --mode=launch-and-attach --set full ./program_gpu dna <input file ref> <input file query> ./out-file
 ```
-```
+
 
 ## References
 1. Ding, Nan, and Samuel Williams. "An instruction roofline model for gpus." 2019 IEEE/ACM Performance Modeling, Benchmarking and Simulation of High Performance Computer Systems (PMBS). IEEE, 2019    
