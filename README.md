@@ -5,10 +5,10 @@ This repository contains the essential scripts of profiling, building, and visua
 ## Usage Instructions
 
 
-1. Allocate a GPU node (preferably with `--exclusive`) using the following command:     
+1. Allocate a GPU node using the following command:     
 
-```bash
-salloc -G 1 -C gpu -t 00:30:00 --exclusive
+```
+salloc --account=soc-gpu-np --partition=soc-gpu-np --nodes=1 --ntasks=16 --gres=gpu:a100:1 --mem=0
 ```
 
 3. Run the `collect_metric_extended.sh` script as:     
